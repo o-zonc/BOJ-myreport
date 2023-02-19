@@ -1,0 +1,42 @@
+#include <algorithm>
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    cin.tie(0);
+    ios::sync_with_stdio(0);
+
+    int t;
+    cin >> t;
+
+    int arr[t];
+    for (int i = 0; i < t; i++) {
+        cin >> arr[i];
+    }
+
+    sort(arr, arr + t);
+
+    int start = 0, end = t - 1, ans[2] = {0, 0}, mval = 2000000000;
+    while (start < end) {
+        int val = arr[start] + arr[end];
+
+        if (abs(val) <= mval) {
+            mval = abs(val);
+            ans[0] = arr[start];
+            ans[1] = arr[end];
+
+            if (val == 0) {
+                break;
+            }
+        }
+
+        if (val < 0) {
+            start++;
+        } else {
+            end--;
+        }
+    }
+
+    cout << ans[0] << ' ' << ans[1];
+}
