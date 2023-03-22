@@ -1,0 +1,1 @@
+{"name":"Local: a","url":"/Users/ozonc/Desktop/BOJ/SUAPC 2023 Winter/a.cpp","tests":[{"id":1677385150281,"input":"1:52:682 B\n1:50:201 R\n1:49:003 B\n1:49:735 B\n1:50:257 R\n1:51:134 R\n1:49:236 R\n1:53:932 B","output":"Red"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/ozonc/Desktop/BOJ/SUAPC 2023 Winter/a.cpp","group":"local","local":true}

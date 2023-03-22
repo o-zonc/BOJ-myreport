@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"/Users/ozonc/Desktop/BOJ/2023 성균관대학교 프로그래밍 경진대회 Open Contest/A.cpp","tests":[{"id":1677916685738,"input":"3 5 15","output":"YES"},{"id":1677916692691,"input":"3 5 6","output":"NO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/ozonc/Desktop/BOJ/2023 성균관대학교 프로그래밍 경진대회 Open Contest/A.cpp","group":"local","local":true}

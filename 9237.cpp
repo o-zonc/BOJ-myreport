@@ -1,0 +1,28 @@
+#include <algorithm>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+    cin.tie(0);
+    ios::sync_with_stdio(0);
+
+    int n;
+    cin >> n;
+
+    vector<int> v;
+    while (n--) {
+        int x;
+        cin >> x;
+        v.push_back(x);
+    }
+
+    sort(v.rbegin(), v.rend());
+
+    int ans = 0;
+    for (int i = 0; i < v.size(); i++)
+        ans = max(ans, v[i] + i + 2);
+
+    cout << ans;
+}

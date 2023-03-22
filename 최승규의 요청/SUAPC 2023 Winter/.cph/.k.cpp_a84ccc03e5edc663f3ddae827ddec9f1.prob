@@ -1,0 +1,1 @@
+{"name":"Local: k","url":"/Users/ozonc/Desktop/BOJ/SUAPC 2023 Winter/k.cpp","tests":[{"id":1677386305614,"input":"5\n03:05\n12:40\n03:25\n03:25\n01:10","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/ozonc/Desktop/BOJ/SUAPC 2023 Winter/k.cpp","group":"local","local":true}

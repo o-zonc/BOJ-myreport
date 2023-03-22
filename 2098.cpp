@@ -2,26 +2,23 @@
 
 using namespace std;
 
-const int inf = 0x3f3f3f3f, mxn = 1000000000;
-int dp[16][1 << 16], a[16][16], n;
+const int inf = 0x3f3f3f3f;
+int dp[16][1 << 16], arr[16][16], n;
 
-int dfs(int v, int mask) {
-    if (dp[v][mask])
-        return dp[v][mask];
+int dfs(int x, int mask) {
+    if (dp[x][mask]) return dp[x][mask];
 
-    if (mask == (1 << n) - 1)
-        return dp[v][mask] = a[v][0] ? a[v][0] : inf;
+    if (mask == (1 << n) - 1) return dp[x][mask] = arr[x][0] ? arr[x][0] : inf;
 
-    dp[v][mask] = inf;
+    dp[x][mask] = inf;
 
-    for (int i = 0; i < n; ++i) {
-        if ((mask & (1 << i)) || !a[v][i])
-            continue;
+    for (int i = 0; i < n; i++) {
+        if ((mask & (1 << i)) || !arr[x][i]) continue;
 
-        dp[v][mask] = min(dp[v][mask], dfs(i, mask | (1 << i)) + a[v][i]);
+        dp[x][mask] = min(dp[x][mask], dfs(i, mask | (1 << i)) + arr[x][i]);
     }
 
-    return dp[v][mask];
+    return dp[x][mask];
 }
 
 int main() {
@@ -32,7 +29,7 @@ int main() {
 
     for (int i = 0; i < n; i++)
         for (int j = 0; j < n; j++)
-            cin >> a[i][j];
+            cin >> arr[i][j];
 
     dp[0][1] = dfs(0, 1);
 
